@@ -12,9 +12,13 @@ alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_131/bin/javac 2
 alternatives --set jar /opt/jdk1.8.0_131/bin/jar
 alternatives --set javac /opt/jdk1.8.0_131/bin/javac
 java -version
-echo "export JRE_HOME=/opt/jdk1.8.0_131/jre" >>/etc/environment
+
 
 echo "export JAVA_HOME=/opt/jdk1.8.0_131" >>/etc/environment; source /etc/environment
+echo "export JRE_HOME=/opt/jdk1.8.0_131/jre" >>/etc/environment
+
+source /etc/environment
+
 
 
 #export PATH=$PATH:/opt/jdk1.8.0_131/bin:/opt/jdk1.8.0_131/jre/bin
